@@ -35,193 +35,63 @@ Fancy Traceback (most recent call last):
                  val_out = '<numpy.ndarray float64  (1000, 2, 28, 28, 3)>'
               parameters = {'test_noise': False, 'test_hard': True, 'train_noise': True, 'train_hard': False, 'dropout_z': False, 'noise': 0.2, 'dropout': 0.2, 'optimizer': 'radam', 'min_temperature': 0.5, 'epoch': 2000, 'gs_annealing_start': 0, 'gs_annealing_end': 1000, 'kl_cycle_start': 2000, 'clipnorm': 0.1, 'batch_size': 400, 'lr': 0.001, 'N': 300, 'zerosuppress': 0.1, 'densify': False, 'max_temperature': 5.0, 'conv_channel': 32, 'conv_channel_increment': 1, 'conv_kernel': 5, 'conv_pooling': 1, 'conv_per_pooling': 1, 'conv_depth': 3, 'fc_width': 100, 'fc_depth': 2, 'A': 6000, 'aae_activation': 'relu', 'aae_width': 1000, 'aae_depth': 2, 'eff_regularizer': None, 'beta_d': 1000, 'beta_z': 10, 'output': 'GaussianOutput(sigma=0.1)', 'mode': 'learn', 'track': 'sokoban_image-20000-global-global-2-train', 'num_examples': 20000, 'aeclass': 'CubeSpaceAE_AMA4Conv', 'comment': 'kltune2', 'generator': None, 'picsize': [[28, 28, 3]], 'mean': [[[0.858823529411715, 0.8313725490191176, 0.6901960784
                   resume = False
-                     net = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
+                     net = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7fc7d4c7cfd0>
 
-  File latplan/network.py line 511 function train : self.build(input_shape)
-                val_data = '<numpy.ndarray float64  (1000, 2, 28, 28, 3)>'
-             val_data_to = '<numpy.ndarray float64  (1000, 2, 28, 28, 3)>'
-                  resume = False
-                  kwargs = {'test_noise': False, 'test_hard': True, 'train_noise': True, 'train_hard': False, 'dropout_z': False, 'noise': 0.2, 'dropout': 0.2, 'optimizer': 'radam', 'min_temperature': 0.5, 'epoch': 2000, 'gs_annealing_start': 0, 'gs_annealing_end': 1000, 'kl_cycle_start': 2000, 'clipnorm': 0.1, 'batch_size': 400, 'lr': 0.001, 'N': 300, 'zerosuppress': 0.1, 'densify': False, 'max_temperature': 5.0, 'conv_channel': 32, 'conv_channel_increment': 1, 'conv_kernel': 5, 'conv_pooling': 1, 'conv_per_pooling': 1, 'conv_depth': 3, 'fc_width': 100, 'fc_depth': 2, 'A': 6000, 'aae_activation': 'relu', 'aae_width': 1000, 'aae_depth': 2, 'eff_regularizer': None, 'beta_d': 1000, 'beta_z': 10, 'output': 'GaussianOutput(sigma=0.1)', 'mode': 'learn', 'track': 'sokoban_image-20000-global-global-2-train', 'num_examples': 20000, 'aeclass': 'CubeSpaceAE_AMA4Conv', 'comment': 'kltune2', 'generator': None, 'picsize': [[28, 28, 3]], 'mean': [[[0.858823529411715, 0.8313725490191176, 0.6901960784
-             input_shape = ((2, 0), (28, 1), (28, 2), ('...<1 more>', None))
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-              train_data = '<numpy.ndarray float64  (17999, 2, 28, 28, 3)>'
-           train_data_to = '<numpy.ndarray float64  (17999, 2, 28, 28, 3)>'
+  File latplan/network.py line 678 function train : gradients = tape.gradient(loss_value, net.trainable_weights)
+                        val_data = ['<numpy.ndarray float64  (1000, 2, 28, 28, 3)>']
+                     val_data_to = ['<numpy.ndarray float64  (1000, 2, 28, 28, 3)>']
+                          resume = False
+                          kwargs = {'test_noise': False, 'test_hard': True, 'train_noise': True, 'train_hard': False, 'dropout_z': False, 'noise': 0.2, 'dropout': 0.2, 'optimizer': 'radam', 'min_temperature': 0.5, 'epoch': 2000, 'gs_annealing_start': 0, 'gs_annealing_end': 1000, 'kl_cycle_start': 2000, 'clipnorm': 0.1, 'batch_size': 400, 'lr': 0.001, 'N': 300, 'zerosuppress': 0.1, 'densify': False, 'max_temperature': 5.0, 'conv_channel': 32, 'conv_channel_increment': 1, 'conv_kernel': 5, 'conv_pooling': 1, 'conv_per_pooling': 1, 'conv_depth': 3, 'fc_width': 100, 'fc_depth': 2, 'A': 6000, 'aae_activation': 'relu', 'aae_width': 1000, 'aae_depth': 2, 'eff_regularizer': None, 'beta_d': 1000, 'beta_z': 10, 'output': 'GaussianOutput(sigma=0.1)', 'mode': 'learn', 'track': 'sokoban_image-20000-global-global-2-train', 'num_examples': 20000, 'aeclass': 'CubeSpaceAE_AMA4Conv', 'comment': 'kltune2', 'generator': None, 'picsize': [[28, 28, 3]], 'mean': [[[0.858823529411715, 0.8313725490191176, 0.69
+                     input_shape = ((2, 0), (28, 1), (28, 2), ('...<1 more>', None))
+                           epoch = 0
+                     start_epoch = 0
+                     index_array = '<numpy.ndarray int64    (17999,)>'
+                           clist = <keras.callbacks.CallbackList object at 0x7fc923411e50>
+                      some_count = 0
+                      is_correct = 0
+                            logs = {}
+                          states = '<numpy.ndarray float64  (39998, 28, 28, 3)>'
+                          resset = False
+                         loss_fn = <tensorflow.python.keras.losses.CategoricalCrossentropy object at 0x7fc92342aa90>
+                   indices_cache = ['<numpy.ndarray int64    (400,)>', '<numpy.ndarray int64    (400,)>', '<numpy.ndarray int64    (400,)>', '...<41 more>']
+                train_data_cache = [['<numpy.ndarray float64  (400, 2, 28, 28, 3)>'], ['<numpy.ndarray float64  (400, 2, 28, 28, 3)>'], ['<numpy.ndarray float64  (400, 2, 28, 28, 3)>'], '...<41 more>']
+             train_data_to_cache = [['<numpy.ndarray float64  (400, 2, 28, 28, 3)>'], ['<numpy.ndarray float64  (400, 2, 28, 28, 3)>'], ['<numpy.ndarray float64  (400, 2, 28, 28, 3)>'], '...<41 more>']
+             train_subdata_cache = ['<numpy.ndarray float64  (400, 2, 28, 28, 3)>']
+          train_subdata_to_cache = ['<numpy.ndarray float64  (400, 2, 28, 28, 3)>']
+                             net = <keras.engine.training.Model object at 0x7fc923918d30>
+       train_subdata_batch_cache = '<numpy.ndarray float64  (400, 2, 28, 28, 3)>'
+    train_subdata_to_batch_cache = '<numpy.ndarray float64  (400, 2, 28, 28, 3)>'
+                            tape = <tensorflow.python.eager.backprop.GradientTape object at 0x7fc9233b7fd0>
+                           preds = <tf.Tensor 'model_1/dmerge_5/concat:0' shape=(?, 2, 28, 28, 3) dtype=float32>
+                      loss_value = <tf.Tensor 'model_1/lambda_1/Abs:0' shape=() dtype=float32>
+                      batch_size = 400
+                        clipnorm = 0.1
+                              lr = 0.001
+                       optimizer = 'radam'
+                   plot_val_data = '<numpy.ndarray float64  (1, 2, 28, 28, 3)>'
+                            self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7fc7d4c7cfd0>
+                      train_data = ['<numpy.ndarray float64  (17999, 2, 28, 28, 3)>']
+                   train_data_to = ['<numpy.ndarray float64  (17999, 2, 28, 28, 3)>']
 
-  File latplan/network.py line 126 function build : self._build_around(*args,**kwargs)
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-                    args = (((2, 0), (28, 1), (28, 2), ('...<1 more>', None)),)
-                  kwargs = {}
+  File ../../../usr/local/lib/python3.8/dist-packages/tensorflow_core/python/eager/backprop.py line 1009 function gradient : flat_grad = imperative_grad.imperative_grad(
+                     self = <tensorflow.python.eager.backprop.GradientTape object at 0x7fc9233b7fd0>
+                   target = <tf.Tensor 'model_1/lambda_1/Abs:0' shape=() dtype=float32>
+                  sources = [<tf.Variable 'batch_normalization_2/gamma:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'batch_normalization_2/beta:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'conv2d_1/kernel:0' shape=(5, 5, 3, 32) dtype=float32_ref>, '...<33 more>']
+         output_gradients = None
+    unconnected_gradients = <UnconnectedGradients.NONE: 'none'>
+             flat_targets = [<tf.Tensor 'model_1/lambda_1/Abs:0' shape=() dtype=float32>]
+                        t = <tf.Variable 'conv2d_transpose_2/bias:0' shape=(3,) dtype=float32_ref>
+             flat_sources = [<tf.Variable 'batch_normalization_2/gamma:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'batch_normalization_2/beta:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'conv2d_1/kernel:0' shape=(5, 5, 3, 32) dtype=float32_ref>, '...<33 more>']
+         flat_sources_raw = [<tf.Variable 'batch_normalization_2/gamma:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'batch_normalization_2/beta:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'conv2d_1/kernel:0' shape=(5, 5, 3, 32) dtype=float32_ref>, '...<33 more>']
 
-  File latplan/mixins/encoder_decoder.py line 94 function _build_around : super()._build_around(input_shape)
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-             input_shape = ((2, 0), (28, 1), (28, 2), ('...<1 more>', None))
-
-  File latplan/model.py line 631 function _build_around : super()._build_around(input_shape)
-             input_shape = ((2, 0), (28, 1), (28, 2), ('...<1 more>', None))
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-
-  File latplan/model.py line 1525 function _build_around : super()._build_around(input_shape)
-             input_shape = ((2, 0), (28, 1), (28, 2), ('...<1 more>', None))
-                       A = 6000
-         initial_weights = []
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-
-  File latplan/model.py line 499 function _build_around : super()._build_around(input_shape[1:])
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-             input_shape = ((2, 0), (28, 1), (28, 2), ('...<1 more>', None))
-
-  File latplan/model.py line 224 function _build_around : super()._build_around(input_shape)
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-             input_shape = (28, 28, 3)
-
-  File latplan/mixins/encoder_decoder.py line 40 function _build_around : super()._build_around(state_input_shape)
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-       state_input_shape = (28, 28, 3)
-
-  File latplan/network.py line 138 function _build_around : return self._build_primary(*args,**kwargs)
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-                    args = ((28, 28, 3),)
-                  kwargs = {}
-
-  File latplan/model.py line 1037 function _build_primary : super()._build_primary(input_shape)
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-             input_shape = (28, 28, 3)
-
-  File latplan/model.py line 865 function _build_primary : super()._build_primary(input_shape)
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-             input_shape = (28, 28, 3)
-
-  File latplan/model.py line 1674 function _build_primary : self.net = Model(x, [y_aae, total_loss])
-                    self = <latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus object at 0x7f0c187a2fd0>
-             input_shape = (28, 28, 3)
-                       x = <tf.Tensor 'input_1:0' shape=(?, 2, 28, 28, 3) dtype=float32>
-                       _ = {}
-                   x_pre = <tf.Tensor 'strided_slice:0' shape=(?, 28, 28, 3) dtype=float32>
-                   x_suc = <tf.Tensor 'strided_slice_1:0' shape=(?, 28, 28, 3) dtype=float32>
-                       z = <tf.Tensor 'dmerge_2/concat:0' shape=(?, 2, 300) dtype=float32>
-                   z_pre = <tf.Tensor 'binary_concrete_1/concrete_0/cond/Merge:0' shape=(?, 300) dtype=float32>
-                   z_suc = <tf.Tensor 'binary_concrete_1_1/concrete_1/cond/Merge:0' shape=(?, 300) dtype=float32>
-                       y = <tf.Tensor 'dmerge_3/concat:0' shape=(?, 2, 28, 28, 3) dtype=float32>
-                   y_pre = <tf.Tensor 'activation_1/Identity:0' shape=(?, 28, 28, 3) dtype=float32>
-                   y_suc = <tf.Tensor 'activation_1_1/Identity:0' shape=(?, 28, 28, 3) dtype=float32>
-                   l_pre = <tf.Tensor 'dense_5/BiasAdd:0' shape=(?, 300) dtype=float32>
-                   l_suc = <tf.Tensor 'dense_5_1/BiasAdd:0' shape=(?, 300) dtype=float32>
-                   p_pre = <tf.Tensor 'Sigmoid:0' shape=(?, 300) dtype=float32>
-                   p_suc = <tf.Tensor 'Sigmoid_1:0' shape=(?, 300) dtype=float32>
-                  action = <tf.Tensor 'gumbel_softmax_1/gumbel_0/cond/Merge:0' shape=(?, 1, 6000) dtype=float32>
-               z_suc_aae = <tf.Tensor 'binary_concrete_2/concrete_2/cond/Merge:0' shape=(?, 300) dtype=float32>
-               z_pre_aae = <tf.Tensor 'binary_concrete_3/concrete_3/cond/Merge:0' shape=(?, 300) dtype=float32>
-               y_suc_aae = <tf.Tensor 'activation_1_2/Identity:0' shape=(?, 28, 28, 3) dtype=float32>
-               y_pre_aae = <tf.Tensor 'activation_1_3/Identity:0' shape=(?, 28, 28, 3) dtype=float32>
-                   z_aae = <tf.Tensor 'dmerge_4/concat:0' shape=(?, 2, 300) dtype=float32>
-                   y_aae = <tf.Tensor 'dmerge_5/concat:0' shape=(?, 2, 28, 28, 3) dtype=float32>
-                l_action = <tf.Tensor 'dense_2/BiasAdd:0' shape=(?, 6000) dtype=float32>
-               l_suc_aae = <tf.Tensor 'add_1/add:0' shape=(?, 300) dtype=float32>
-               l_pre_aae = <tf.Tensor 'add_2/add:0' shape=(?, 300) dtype=float32>
-                       p = <tf.Tensor 'dmerge_6/concat:0' shape=(?, 2, 300) dtype=float32>
-               p_pre_aae = <tf.Tensor 'Sigmoid_2:0' shape=(?, 300) dtype=float32>
-               p_suc_aae = <tf.Tensor 'Sigmoid_3:0' shape=(?, 300) dtype=float32>
-                   p_aae = <tf.Tensor 'dmerge_7/concat:0' shape=(?, 2, 300) dtype=float32>
-              pdiff_z1z2 = <tf.Tensor 'Mean:0' shape=(?,) dtype=float32>
-              pdiff_z0z3 = <tf.Tensor 'Mean_1:0' shape=(?,) dtype=float32>
-              pdiff_z0z1 = <tf.Tensor 'Mean_2:0' shape=(?,) dtype=float32>
-              pdiff_z0z2 = <tf.Tensor 'Mean_3:0' shape=(?,) dtype=float32>
-              loss_trans = 0.0
-             loss_states = 0.0
-         additional_loss = <tf.Tensor 'Const_10:0' shape=() dtype=float32>
-                   kl_z0 = <tf.Tensor 'Sum:0' shape=(?,) dtype=float32>
-                   kl_z1 = <tf.Tensor 'Sum_1:0' shape=(?,) dtype=float32>
-                 kl_a_z0 = <tf.Tensor 'Sum_5:0' shape=(?,) dtype=float32>
-                 kl_a_z1 = <tf.Tensor 'Sum_9:0' shape=(?,) dtype=float32>
-                 kl_z1z2 = <tf.Tensor 'Sum_10:0' shape=(?,) dtype=float32>
-                 kl_z0z3 = <tf.Tensor 'Sum_11:0' shape=(?,) dtype=float32>
-                    _rec = <bound method GaussianOutput.loss of <latplan.mixins.output.GaussianOutput object at 0x7f0d6eca9a60>>
-                    x0y0 = <tf.Tensor 'Sum_12:0' shape=(?,) dtype=float32>
-                    x1y1 = <tf.Tensor 'Sum_13:0' shape=(?,) dtype=float32>
-                    x0y3 = <tf.Tensor 'Sum_14:0' shape=(?,) dtype=float32>
-                    x1y2 = <tf.Tensor 'Sum_15:0' shape=(?,) dtype=float32>
-      ama3_forward_loss1 = <tf.Tensor 'add_9:0' shape=(?,) dtype=float32>
-      ama3_forward_loss2 = <tf.Tensor 'add_12:0' shape=(?,) dtype=float32>
-     ama3_backward_loss1 = <tf.Tensor 'add_16:0' shape=(?,) dtype=float32>
-     ama3_backward_loss2 = <tf.Tensor 'add_19:0' shape=(?,) dtype=float32>
-      ama3_forward_elbo1 = <tf.Tensor 'add_23:0' shape=(?,) dtype=float32>
-      ama3_forward_elbo2 = <tf.Tensor 'add_26:0' shape=(?,) dtype=float32>
-     ama3_backward_elbo1 = <tf.Tensor 'add_30:0' shape=(?,) dtype=float32>
-     ama3_backward_elbo2 = <tf.Tensor 'add_33:0' shape=(?,) dtype=float32>
-                    elbo = <tf.Tensor 'truediv_8:0' shape=(?,) dtype=float32>
-              total_loss = <tf.Tensor 'lambda_28/add_2:0' shape=(?,) dtype=float32>
-
-  File ../../../usr/local/lib/python3.8/dist-packages/keras/legacy/interfaces.py line 91 function wrapper : return func(*args, **kwargs)
-                       args = (<keras.engine.training.Model object at 0x7f0d665a39a0>, <tf.Tensor 'input_1:0' shape=(?, 2, 28, 28, 3) dtype=float32>, [<tf.Tensor 'dmerge_5/concat:0' shape=(?, 2, 28, 28, 3) dtype=float32>, <tf.Tensor 'lambda_28/add_2:0' shape=(?,) dtype=float32>])
-                     kwargs = {}
-                object_name = 'Model'
-                  converted = []
-                   old_name = 'output'
-                   new_name = 'outputs'
-    allowed_positional_args = []
-      check_positional_args = False
-                conversions = [('input', 'inputs'), ('output', 'outputs')]
-                object_type = 'class'
-               preprocessor = None
-          value_conversions = []
-
-  File ../../../usr/local/lib/python3.8/dist-packages/keras/engine/network.py line 94 function __init__ : self._init_graph_network(*args, **kwargs)
-                    self = <keras.engine.training.Model object at 0x7f0d665a39a0>
-                    args = (<tf.Tensor 'input_1:0' shape=(?, 2, 28, 28, 3) dtype=float32>, [<tf.Tensor 'dmerge_5/concat:0' shape=(?, 2, 28, 28, 3) dtype=float32>, <tf.Tensor 'lambda_28/add_2:0' shape=(?,) dtype=float32>])
-                  kwargs = {}
-
-  File ../../../usr/local/lib/python3.8/dist-packages/keras/engine/network.py line 236 function _init_graph_network : nodes, nodes_by_depth, layers, layers_by_depth = _map_graph_network(
-                    self = <keras.engine.training.Model object at 0x7f0d665a39a0>
-                  inputs = <tf.Tensor 'input_1:0' shape=(?, 2, 28, 28, 3) dtype=float32>
-                 outputs = [<tf.Tensor 'dmerge_5/concat:0' shape=(?, 2, 28, 28, 3) dtype=float32>, <tf.Tensor 'lambda_28/add_2:0' shape=(?,) dtype=float32>]
-                    name = None
-                  kwargs = {}
-                       x = <tf.Tensor 'input_1:0' shape=(?, 2, 28, 28, 3) dtype=float32>
-                   layer = <keras.engine.input_layer.InputLayer object at 0x7f0d6ec6d4c0>
-              node_index = 0
-            tensor_index = 0
-
-  File ../../../usr/local/lib/python3.8/dist-packages/keras/engine/network.py line 1418 function _map_graph_network : build_map(x, finished_nodes, nodes_in_progress,
-                       inputs = [<tf.Tensor 'input_1:0' shape=(?, 2, 28, 28, 3) dtype=float32>]
-                      outputs = [<tf.Tensor 'dmerge_5/concat:0' shape=(?, 2, 28, 28, 3) dtype=float32>, <tf.Tensor 'lambda_28/add_2:0' shape=(?,) dtype=float32>]
-                 nodes_depths = {}
-                layers_depths = {}
-               finished_nodes = {<keras.engine.base_layer.Node object at 0x7f0d6ebb1820>, <keras.engine.base_layer.Node object at 0x7f0d667f5820>, <keras.engine.base_layer.Node object at 0x7f0d666a4040>, <keras.engine.base_layer.Node object at 0x7f0d6ebdb850>, <keras.engine.base_layer.Node object at 0x7f0d66770850>, <keras.engine.base_layer.Node object at 0x7f0d6c48b0a0>, <keras.engine.base_layer.Node object at 0x7f0d6c44d0a0>, <keras.engine.base_layer.Node object at 0x7f0d66a298b0>, <keras.engine.base_layer.Node object at 0x7f0d669af8e0>, <keras.engine.base_layer.Node object at 0x7f0d66870100>, <keras.engine.base_layer.Node object at 0x7f0d6c486910>, <keras.engine.base_layer.Node object at 0x7f0d669af910>, <keras.engine.base_layer.Node object at 0x7f0d668d0940>, <keras.engine.base_layer.Node object at 0x7f0d666cc940>, <keras.engine.base_layer.Node object at 0x7f0d66a39160>, <keras.engine.base_layer.Node object at 0x7f0d6698f160>, <keras.engine.base_layer.Node object at 0x7f0d668d0970>
-            nodes_in_progress = {<keras.engine.base_layer.Node object at 0x7f0d66595a30>}
-                            x = <tf.Tensor 'lambda_28/add_2:0' shape=(?,) dtype=float32>
-                        layer = <keras.layers.core.Lambda object at 0x7f0d6658dc70>
-                   node_index = 0
-                 tensor_index = 0
-                layer_indices = {<keras.layers.merge.Concatenate object at 0x7f0d666a4c10>: 0, <keras.layers.core.Lambda object at 0x7f0d666a1190>: 1, <keras.layers.core.Activation object at 0x7f0d6ec65670>: 2, <keras.layers.core.Reshape object at 0x7f0d6ec65970>: 3, <keras.layers.convolutional.Conv2DTranspose object at 0x7f0d6ec65700>: 4, <keras.layers.core.Dropout object at 0x7f0d6ec65d00>: 5, <keras.layers.normalization.BatchNormalization object at 0x7f0d6ec657c0>: 6, <keras.layers.convolutional.Conv2DTranspose object at 0x7f0d6ec65610>: 7, <keras.layers.core.Reshape object at 0x7f0d6ec655e0>: 8, <keras.layers.core.Dropout object at 0x7f0d6ec65340>: 9, <keras.layers.normalization.BatchNormalization object at 0x7f0d6ec65310>: 10, <keras.layers.core.Dense object at 0x7f0d6ec651f0>: 11, <keras.layers.normalization.BatchNormalization object at 0x7f0d6c43ed90>: 12, <latplan.util.layers.BinaryConcrete object at 0x7f0d669193a0>: 13, <keras.layers.merge.Add object at 0x7f0d66a29040>: 14, <k
-                network_nodes = {'conv2d_transpose_1_ib-2', 'conv2d_2_ib-1', 'dmerge_5_ib-0', 'conv2d_transpose_2_ib-3', 'conv2d_transpose_2_ib-2', 'reshape_4_ib-2', 'batch_normalization_10_ib-0', 'dense_8_ib-0', 'conv2d_1_ib-1', 'dropout_5_ib-3', 'dense_5_ib-1', 'lambda_14_ib-0', 'batch_normalization_7_ib-3', 'reshape_4_ib-3', 'binary_concrete_2_ib-0', 'batch_normalization_3_ib-1', 'reshape_3_ib-1', 'dense_5_ib-0', 'dropout_4_ib-2', 'activation_1_ib-2', 'batch_normalization_1_ib-0', 'lambda_18_ib-0', 'batch_normalization_7_ib-2', 'batch_normalization_6_ib-2', 'my_flatten_2_ib-0', 'binary_concrete_1_ib-0', 'dropout_3_ib-1', 'my_flatten_1_ib-0', 'gaussian_noise_1_ib-1', 'lambda_19_ib-0', 'dropout_5_ib-2', 'reshape_5_ib-3', 'dense_6_ib-3', 'reshape_3_ib-0', 'batch_normalization_4_ib-0', 'conv2d_2_ib-0', 'batch_normalization_8_ib-0', 'batch_normalization_5_ib-2', 'lambda_28_ib-0', 'gumbel_softmax_1_ib-0', 'batch_normalization_4_ib-1', 'batch_normalization_11_ib-0', 'activation_1_ib-3', 'b
-    nodes_in_decreasing_depth = [<keras.engine.base_layer.Node object at 0x7f0d6ec6d520>, <keras.engine.base_layer.Node object at 0x7f0d6c4499d0>, <keras.engine.base_layer.Node object at 0x7f0d6eb7be20>, '...<67 more>']
-
-  File ../../../usr/local/lib/python3.8/dist-packages/keras/engine/network.py line 1407 function build_map : build_map(x, finished_nodes, nodes_in_progress, layer,
-                       tensor = <tf.Tensor 'lambda_28/add_2:0' shape=(?,) dtype=float32>
-               finished_nodes = {<keras.engine.base_layer.Node object at 0x7f0d6ebb1820>, <keras.engine.base_layer.Node object at 0x7f0d667f5820>, <keras.engine.base_layer.Node object at 0x7f0d666a4040>, <keras.engine.base_layer.Node object at 0x7f0d6ebdb850>, <keras.engine.base_layer.Node object at 0x7f0d66770850>, <keras.engine.base_layer.Node object at 0x7f0d6c48b0a0>, <keras.engine.base_layer.Node object at 0x7f0d6c44d0a0>, <keras.engine.base_layer.Node object at 0x7f0d66a298b0>, <keras.engine.base_layer.Node object at 0x7f0d669af8e0>, <keras.engine.base_layer.Node object at 0x7f0d66870100>, <keras.engine.base_layer.Node object at 0x7f0d6c486910>, <keras.engine.base_layer.Node object at 0x7f0d669af910>, <keras.engine.base_layer.Node object at 0x7f0d668d0940>, <keras.engine.base_layer.Node object at 0x7f0d666cc940>, <keras.engine.base_layer.Node object at 0x7f0d66a39160>, <keras.engine.base_layer.Node object at 0x7f0d6698f160>, <keras.engine.base_layer.Node object at 0x7f0d668d0970>
-            nodes_in_progress = {<keras.engine.base_layer.Node object at 0x7f0d66595a30>}
-                        layer = None
-                   node_index = None
-                 tensor_index = None
-                         node = <keras.engine.base_layer.Node object at 0x7f0d66595a30>
-                     node_key = 'lambda_28_ib-0'
-                            i = 0
-                            x = <tf.Tensor 'add_9:0' shape=(?,) dtype=float32>
-                layer_indices = {<keras.layers.merge.Concatenate object at 0x7f0d666a4c10>: 0, <keras.layers.core.Lambda object at 0x7f0d666a1190>: 1, <keras.layers.core.Activation object at 0x7f0d6ec65670>: 2, <keras.layers.core.Reshape object at 0x7f0d6ec65970>: 3, <keras.layers.convolutional.Conv2DTranspose object at 0x7f0d6ec65700>: 4, <keras.layers.core.Dropout object at 0x7f0d6ec65d00>: 5, <keras.layers.normalization.BatchNormalization object at 0x7f0d6ec657c0>: 6, <keras.layers.convolutional.Conv2DTranspose object at 0x7f0d6ec65610>: 7, <keras.layers.core.Reshape object at 0x7f0d6ec655e0>: 8, <keras.layers.core.Dropout object at 0x7f0d6ec65340>: 9, <keras.layers.normalization.BatchNormalization object at 0x7f0d6ec65310>: 10, <keras.layers.core.Dense object at 0x7f0d6ec651f0>: 11, <keras.layers.normalization.BatchNormalization object at 0x7f0d6c43ed90>: 12, <latplan.util.layers.BinaryConcrete object at 0x7f0d669193a0>: 13, <keras.layers.merge.Add object at 0x7f0d66a29040>: 14, <k
-                network_nodes = {'conv2d_transpose_1_ib-2', 'conv2d_2_ib-1', 'dmerge_5_ib-0', 'conv2d_transpose_2_ib-3', 'conv2d_transpose_2_ib-2', 'reshape_4_ib-2', 'batch_normalization_10_ib-0', 'dense_8_ib-0', 'conv2d_1_ib-1', 'dropout_5_ib-3', 'dense_5_ib-1', 'lambda_14_ib-0', 'batch_normalization_7_ib-3', 'reshape_4_ib-3', 'binary_concrete_2_ib-0', 'batch_normalization_3_ib-1', 'reshape_3_ib-1', 'dense_5_ib-0', 'dropout_4_ib-2', 'activation_1_ib-2', 'batch_normalization_1_ib-0', 'lambda_18_ib-0', 'batch_normalization_7_ib-2', 'batch_normalization_6_ib-2', 'my_flatten_2_ib-0', 'binary_concrete_1_ib-0', 'dropout_3_ib-1', 'my_flatten_1_ib-0', 'gaussian_noise_1_ib-1', 'lambda_19_ib-0', 'dropout_5_ib-2', 'reshape_5_ib-3', 'dense_6_ib-3', 'reshape_3_ib-0', 'batch_normalization_4_ib-0', 'conv2d_2_ib-0', 'batch_normalization_8_ib-0', 'batch_normalization_5_ib-2', 'lambda_28_ib-0', 'gumbel_softmax_1_ib-0', 'batch_normalization_4_ib-1', 'batch_normalization_11_ib-0', 'activation_1_ib-3', 'b
-    nodes_in_decreasing_depth = [<keras.engine.base_layer.Node object at 0x7f0d6ec6d520>, <keras.engine.base_layer.Node object at 0x7f0d6c4499d0>, <keras.engine.base_layer.Node object at 0x7f0d6eb7be20>, '...<67 more>']
-
-  File ../../../usr/local/lib/python3.8/dist-packages/keras/engine/network.py line 1380 function build_map : node = layer._inbound_nodes[node_index]
-                       tensor = <tf.Tensor 'add_9:0' shape=(?,) dtype=float32>
-               finished_nodes = {<keras.engine.base_layer.Node object at 0x7f0d6ebb1820>, <keras.engine.base_layer.Node object at 0x7f0d667f5820>, <keras.engine.base_layer.Node object at 0x7f0d666a4040>, <keras.engine.base_layer.Node object at 0x7f0d6ebdb850>, <keras.engine.base_layer.Node object at 0x7f0d66770850>, <keras.engine.base_layer.Node object at 0x7f0d6c48b0a0>, <keras.engine.base_layer.Node object at 0x7f0d6c44d0a0>, <keras.engine.base_layer.Node object at 0x7f0d66a298b0>, <keras.engine.base_layer.Node object at 0x7f0d669af8e0>, <keras.engine.base_layer.Node object at 0x7f0d66870100>, <keras.engine.base_layer.Node object at 0x7f0d6c486910>, <keras.engine.base_layer.Node object at 0x7f0d669af910>, <keras.engine.base_layer.Node object at 0x7f0d668d0940>, <keras.engine.base_layer.Node object at 0x7f0d666cc940>, <keras.engine.base_layer.Node object at 0x7f0d66a39160>, <keras.engine.base_layer.Node object at 0x7f0d6698f160>, <keras.engine.base_layer.Node object at 0x7f0d668d0970>
-            nodes_in_progress = {<keras.engine.base_layer.Node object at 0x7f0d66595a30>}
-                        layer = None
-                   node_index = None
-                 tensor_index = None
-                layer_indices = {<keras.layers.merge.Concatenate object at 0x7f0d666a4c10>: 0, <keras.layers.core.Lambda object at 0x7f0d666a1190>: 1, <keras.layers.core.Activation object at 0x7f0d6ec65670>: 2, <keras.layers.core.Reshape object at 0x7f0d6ec65970>: 3, <keras.layers.convolutional.Conv2DTranspose object at 0x7f0d6ec65700>: 4, <keras.layers.core.Dropout object at 0x7f0d6ec65d00>: 5, <keras.layers.normalization.BatchNormalization object at 0x7f0d6ec657c0>: 6, <keras.layers.convolutional.Conv2DTranspose object at 0x7f0d6ec65610>: 7, <keras.layers.core.Reshape object at 0x7f0d6ec655e0>: 8, <keras.layers.core.Dropout object at 0x7f0d6ec65340>: 9, <keras.layers.normalization.BatchNormalization object at 0x7f0d6ec65310>: 10, <keras.layers.core.Dense object at 0x7f0d6ec651f0>: 11, <keras.layers.normalization.BatchNormalization object at 0x7f0d6c43ed90>: 12, <latplan.util.layers.BinaryConcrete object at 0x7f0d669193a0>: 13, <keras.layers.merge.Add object at 0x7f0d66a29040>: 14, <k
-                network_nodes = {'conv2d_transpose_1_ib-2', 'conv2d_2_ib-1', 'dmerge_5_ib-0', 'conv2d_transpose_2_ib-3', 'conv2d_transpose_2_ib-2', 'reshape_4_ib-2', 'batch_normalization_10_ib-0', 'dense_8_ib-0', 'conv2d_1_ib-1', 'dropout_5_ib-3', 'dense_5_ib-1', 'lambda_14_ib-0', 'batch_normalization_7_ib-3', 'reshape_4_ib-3', 'binary_concrete_2_ib-0', 'batch_normalization_3_ib-1', 'reshape_3_ib-1', 'dense_5_ib-0', 'dropout_4_ib-2', 'activation_1_ib-2', 'batch_normalization_1_ib-0', 'lambda_18_ib-0', 'batch_normalization_7_ib-2', 'batch_normalization_6_ib-2', 'my_flatten_2_ib-0', 'binary_concrete_1_ib-0', 'dropout_3_ib-1', 'my_flatten_1_ib-0', 'gaussian_noise_1_ib-1', 'lambda_19_ib-0', 'dropout_5_ib-2', 'reshape_5_ib-3', 'dense_6_ib-3', 'reshape_3_ib-0', 'batch_normalization_4_ib-0', 'conv2d_2_ib-0', 'batch_normalization_8_ib-0', 'batch_normalization_5_ib-2', 'lambda_28_ib-0', 'gumbel_softmax_1_ib-0', 'batch_normalization_4_ib-1', 'batch_normalization_11_ib-0', 'activation_1_ib-3', 'b
-    nodes_in_decreasing_depth = [<keras.engine.base_layer.Node object at 0x7f0d6ec6d520>, <keras.engine.base_layer.Node object at 0x7f0d6c4499d0>, <keras.engine.base_layer.Node object at 0x7f0d6eb7be20>, '...<67 more>']
+  File ../../../usr/local/lib/python3.8/dist-packages/tensorflow_core/python/eager/imperative_grad.py line 70 function imperative_grad : return pywrap_tensorflow.TFE_Py_TapeGradient(
+                     tape = <tensorflow.python.eager.tape.Tape object at 0x7fc923386640>
+                   target = [<tf.Tensor 'model_1/lambda_1/Abs:0' shape=() dtype=float32>]
+                  sources = [<tf.Variable 'batch_normalization_2/gamma:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'batch_normalization_2/beta:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'conv2d_1/kernel:0' shape=(5, 5, 3, 32) dtype=float32_ref>, '...<33 more>']
+         output_gradients = None
+              sources_raw = [<tf.Variable 'batch_normalization_2/gamma:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'batch_normalization_2/beta:0' shape=(3,) dtype=float32_ref>, <tf.Variable 'conv2d_1/kernel:0' shape=(5, 5, 3, 32) dtype=float32_ref>, '...<33 more>']
+    unconnected_gradients = <UnconnectedGradients.NONE: 'none'>
 
 
-AttributeError: 'NoneType' object has no attribute '_inbound_nodes'
+AttributeError: 'RefVariable' object has no attribute '_id'
 
